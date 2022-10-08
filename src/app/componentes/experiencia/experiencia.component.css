@@ -1,0 +1,19 @@
+#exp{
+    background-color: hsla(202, 71%, 60%, 0.297);
+    padding: 0 0 4% 0;
+}
+
+#logo__AC{
+    max-width: 15%;
+    max-height: 15%;
+    border-radius: 20%;
+}
+#logo__type{
+    max-width: 20%;
+    max-height: 20%;
+}
+#explab{
+    background-color: hsla(202, 71%, 60%, 0.297);
+    padding: 0% 3%;
+}
+

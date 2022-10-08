@@ -1,0 +1,13 @@
+#sobremi{
+    text-align:center;
+    background-image: url(src\assets\waves/waves3.svg);
+    padding-top: 7%;
+}
+#sob{
+    padding: 4% 20% 0%;
+    text-align:justify; 
+    background-color:#f2991db3; 
+}
+.text{
+    font-size:small;
+}

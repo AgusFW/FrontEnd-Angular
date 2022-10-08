@@ -1,122 +1,12 @@
 .main{
     font-family: 'Aref Ruqaa Ink', serif;
-    font-size: large;
 }
-#titulo{
-    font-size: 300%;
-    padding-bottom: 3%;
-}
-#titulo:hover{
-    color: #f2991db3;
-}
-#subtitulo:hover{
-    color: #f2991db3;
-}
-#presentacion{
-    padding: 0% 3%;
-    background-image: url(assets\waves/waves.svg);
-}
-#foto{
-    max-width: 70%;
-    max-height: 70%;
-    border: 1px solid;
-    box-shadow: 3px 2px 2px;
-}
-#foto:hover{
-    transition: .3s;
-    transform: scalex(1.1) scaley(1.1);
-    transform-origin: center;
-}
+
 .agrandar:hover{
     transition: .3s;
     transform: scalex(1.2) scaley(1.2);
     transform-origin: center;
 }
-#exp{
-    background-color: hsla(202, 71%, 60%, 0.297);
-    padding: 0 0 4% 0;
-}
-#presentacion_text{
-    padding: 3%;
-}
-#logo__AC{
-    max-width: 15%;
-    max-height: 15%;
-    border-radius: 20%;
-}
-#logo__type{
-    max-width: 20%;
-    max-height: 20%;
-}
-#explab{
-    background-color: hsla(202, 71%, 60%, 0.297);
-    padding: 0% 3%;
-}
-.text{
-    font-size:small;
-}
-.text:hover{
-    transition: .3s;
-    transform: scalex(1.2) scaley(1.2);
-    transform-origin: center;
-    font-weight: bold;
-}
-#est{
-    background-image: url(assets\waves/waves2.svg); 
-    padding-top: 5%;
-}
-#estudios{
-    padding-top: 3%;
-}
-#logo__argprog{
-    max-width: 30%;
-    max-height: 30%; 
-}
-#sobremi{
-    text-align:center;
-    background-image: url(assets\waves/waves3.svg);
-    padding-top: 7%;
-}
-#sob{
-    padding: 4% 20% 0%;
-    text-align:justify; 
-    background-color:#f2991db3; 
-}
-#cto{
-    padding-top: 5%;
-    background-image: url(assets\waves/waves4.svg);
-}
-#mail{
-    padding-top: 5%;
-}
-.fa-envelope{
-    color: red;
-    font-size: 2rem;
-    margin:2%;
-}
-.fa-linkedin-in{
-    color: #0e76a8;
-    font-size: 2rem;
-    margin:2%;
-}
-#logo__git{
-    max-width: 7%;
-    max-height: 7%;
-    margin:2%; 
-}
-.lista__link{
-    text-decoration: none;
-}
-.gracias{
-    padding: 20% 0 0;
-}
-#footer{
-    padding: 3% 12% 0;
-    background-image: url(assets\waves/waves5.svg);
-    position: relative;
-    bottom: 0%; 
-}
-#logo_AW{
-    max-width: 15%;
-    max-height: 15%;  
-}
+
+
+

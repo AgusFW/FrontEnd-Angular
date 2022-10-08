@@ -1,0 +1,41 @@
+
+#cto{
+    padding-top: 5%;
+    background-image: url(src\assets\waves/waves4.svg);
+}
+#mail{
+    padding-top: 5%;
+}
+.fa-envelope{
+    color: red;
+    font-size: 2rem;
+    margin:2%;
+}
+.fa-linkedin-in{
+    color: #0e76a8;
+    font-size: 2rem;
+    margin:2%;
+}
+#logo__git{
+    max-width: 7%;
+    max-height: 7%;
+    margin:2%; 
+}
+.lista__link{
+    text-decoration: none;
+    font-size:x-large;
+
+}
+.gracias{
+    padding: 20% 0 0;
+}
+#footer{
+    padding: 3% 12% 0;
+    background-image: url(src\assets\waves/waves5.svg);
+    position: relative;
+    bottom: 0%; 
+}
+#logo_AW{
+    max-width: 15%;
+    max-height: 15%;  
+}

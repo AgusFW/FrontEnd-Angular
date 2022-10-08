@@ -1,0 +1,19 @@
+#est{
+    background-image: url(src\assets\waves/waves2.svg); 
+    padding-top: 5%;
+}
+#estudios{
+    padding-top: 3%;
+}
+#logo__argprog{
+    max-width: 30%;
+    max-height: 30%; 
+}
+#logo__UBA{
+    max-width: 20%;
+    max-height: 20%;
+}
+#logo__cac{
+    max-width: 30%;
+    max-height: 30%; 
+}

@@ -1,0 +1,23 @@
+#titulo{
+    font-size: 300%;
+    padding-bottom: 3%;
+}
+#presentacion{
+    padding: 0% 3%;
+    background-image: url(src\assets\waves\waves.svg);
+}
+#presentacion_text{
+    font-size: large;
+    padding: 3%;
+}
+#foto{
+    max-width: 70%;
+    max-height: 70%;
+    border: 1px solid;
+    box-shadow: 3px 2px 2px;
+}
+#foto:hover{
+    transition: .3s;
+    transform: scalex(1.1) scaley(1.1);
+    transform-origin: center;
+}
