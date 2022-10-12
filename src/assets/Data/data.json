@@ -1,0 +1,41 @@
+{
+	"Persona": [
+		{
+			"id": "1",
+			"nombre": "Agustina",
+			"apellidos": "Witis Ferraria",
+			"fecha_nacimiento": "18/03/1995",
+			"nacionalidad": "Argentina",
+			"mail": "agustina.witis@gmail.com",
+			"sobre_mi": "Desarrolladora Full Stack Jr., terminando la carrera de Filosofía en la UBA (Universidad de Buenos Aires).",
+			"ocupaciín actual": "Coordinadora de Asistencia, Assist Card",
+            "Busca trabajo como": "Programadora Full Stack Jr.",
+		}
+	]
+}
+{
+	"Education": [
+		{
+			"Beca": "Argentina Programa",
+			"titulo": "Desarrollador Full Stack Jr.",
+            "inicio": "Enero del 2022",
+			"fin": "Enero del 2023",
+		},
+		{
+			"Universidad": "Universidad de Buenos Aires",
+            "carrera": "Filosofía",
+            "inicio": " Agosto del 2018",
+			"fin": " Aproximadamente en el 2024"
+		},
+	]
+}
+{
+	"Experiencia": [
+		{
+			"Compañía": "Assist Card",
+            "Puesto": "Coordinadora de Asistencia",
+			"Área": "Casos Complejos",
+			"Período": "Mayo del 2022 hasta la actualidad.",
+		},
+	]
+}
