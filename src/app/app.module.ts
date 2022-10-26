@@ -8,7 +8,7 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { EstudiosComponent } from './componentes/estudios/estudios.component';
 import { SobremiComponent } from './componentes/sobremi/sobremi.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
-import { HttpClientModule } from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
