@@ -1,0 +1,12 @@
+#logo-inicio{
+    max-width: 30%;
+    max-height: 30%;  
+    position:fixed;
+    bottom: 10%;
+    right: 10%;
+}
+#form{
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 14%;
+}

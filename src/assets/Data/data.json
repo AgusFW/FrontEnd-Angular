@@ -1,41 +1,45 @@
 {
-	"Persona": [
-		{
-			"id": "1",
-			"nombre": "Agustina",
-			"apellidos": "Witis Ferraria",
-			"fecha_nacimiento": "18/03/1995",
-			"nacionalidad": "Argentina",
-			"mail": "agustina.witis@gmail.com",
-			"sobre_mi": "Desarrolladora Full Stack Jr., terminando la carrera de Filosofía en la UBA (Universidad de Buenos Aires).",
-			"ocupaciín actual": "Coordinadora de Asistencia, Assist Card",
-            "Busca trabajo como": "Programadora Full Stack Jr.",
-		}
-	]
-}
-{
-	"Education": [
-		{
-			"Beca": "Argentina Programa",
-			"titulo": "Desarrollador Full Stack Jr.",
-            "inicio": "Enero del 2022",
-			"fin": "Enero del 2023",
-		},
-		{
-			"Universidad": "Universidad de Buenos Aires",
-            "carrera": "Filosofía",
-            "inicio": " Agosto del 2018",
-			"fin": " Aproximadamente en el 2024"
-		},
-	]
-}
-{
-	"Experiencia": [
-		{
-			"Compañía": "Assist Card",
-            "Puesto": "Coordinadora de Asistencia",
-			"Área": "Casos Complejos",
-			"Período": "Mayo del 2022 hasta la actualidad.",
-		},
-	]
+	"Persona": {
+		"nombre": "Agustina Witis Ferraria",
+		"sobre_mi": "Desarrolladora Full Stack Jr.",
+		"motivo": "Busco ser parte de un equipo de trabajo innovador y comprometido, que fomente el crecimiento de sus miembros tanto profesional como personalmente. Así mismo, ofrezco mi absoluto compromiso, actitud positiva y proactiva para abordar cualquier tarea o desafío",
+		"img_persona": "../assets/img/fotoperfil.jpeg"
+	},
+
+	"Estudio1": {
+		"titulo1": "UBA - Filosofía",
+		"logo1": "../assets/img/UBA.jpg",
+		"subtitulo1": "Licenciatura y Profesorado",
+		"descripcion1": "Carrera en curso: 80 % aprobado."
+	},
+
+	"Estudio2": {
+		"titulo2": " #YoProgramo",
+		"logo2": "../assets/img/arg.prog.png",
+		"subtitulo2": "Full Stack Jr. - Desarrollo Web y de Aplicaciones",
+		"descripcion2": "Beca otorgada por el Ministerio de Desarrollo Nacional Argentino, en conjunto con Cessi Argentina e INTI"
+	},
+
+	"Estudio3": {
+		"titulo3": "Codo a Codo 4.0",
+		"logo3": "../assets/img/codoacodo.png",
+		"subtitulo3": "Full Stack Java",
+		"descripcion3": "Orientado a objetos concurrentes y tipeados estático."
+	},
+
+	"Experiencia1": {
+		"titulo1": "Puesto Actual",
+		"puesto1": " Coordinadora de Asistencia",
+		"logo_puesto1": "../assets/img/AC.jpg",
+		"tarea_puesto1": "Actualmente me desempeño como Coordinadora de Asistencias para la empresa de asistencia al viajero ASSIST CARD, desarrollando tareas de Back Office en el departamento de Casos Complejos."
+	},
+
+	"Experiencia2": {
+		"titulo2": "Busco cambiar mi perfil a:",
+		"puesto2": "Software Developer",
+		"logo_puesto2":"../assets/img/type.svg",
+		"tarea_puesto2": "Mi objetivo es poner en práctica los conocimientos de programación que he adquirido, tanto de manera formal como autodidacta.",
+		"subtitulo2": "Herramientas/Lenguajes:",
+		"herramientas2":"SCRUM, Github, CSS, Bootstrap, JavaScript, Angular, MySQL, JAVA Y SpringBoot"
+	}
 }
