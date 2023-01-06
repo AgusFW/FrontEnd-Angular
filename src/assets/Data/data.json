@@ -6,40 +6,41 @@
 		"img_persona": "../assets/img/fotoperfil.jpeg"
 	},
 
-	"Estudio1": {
-		"titulo1": "UBA - Filosofía",
-		"logo1": "../assets/img/UBA.jpg",
-		"subtitulo1": "Licenciatura y Profesorado",
-		"descripcion1": "Carrera en curso: 80 % aprobado."
+	"Estudios": [ 
+	{
+		"titulo": "UBA - Filosofía",
+		"logo": "../assets/img/UBA.jpg",
+		"subtitulo": "Licenciatura y Profesorado",
+		"descripcion": "Carrera en curso: 80 % aprobado."
 	},
-
-	"Estudio2": {
-		"titulo2": " #YoProgramo",
-		"logo2": "../assets/img/arg.prog.png",
-		"subtitulo2": "Full Stack Jr. - Desarrollo Web y de Aplicaciones",
-		"descripcion2": "Beca otorgada por el Ministerio de Desarrollo Nacional Argentino, en conjunto con Cessi Argentina e INTI"
+	{
+		"titulo": " #YoProgramo",
+		"logo": "../assets/img/arg.prog.png",
+		"subtitulo": "Full Stack Jr. - Desarrollo Web y de Aplicaciones",
+		"descripcion": "Beca otorgada por el Ministerio de Desarrollo Nacional Argentino, en conjunto con Cessi Argentina e INTI"
 	},
-
-	"Estudio3": {
-		"titulo3": "Codo a Codo 4.0",
-		"logo3": "../assets/img/codoacodo.png",
-		"subtitulo3": "Full Stack Java",
-		"descripcion3": "Orientado a objetos concurrentes y tipeados estático."
-	},
-
-	"Experiencia1": {
-		"titulo1": "Puesto Actual",
-		"puesto1": " Coordinadora de Asistencia",
-		"logo_puesto1": "../assets/img/AC.jpg",
-		"tarea_puesto1": "Actualmente me desempeño como Coordinadora de Asistencias para la empresa de asistencia al viajero ASSIST CARD, desarrollando tareas de Back Office en el departamento de Casos Complejos."
-	},
-
-	"Experiencia2": {
-		"titulo2": "Busco cambiar mi perfil a:",
-		"puesto2": "Software Developer",
-		"logo_puesto2":"../assets/img/type.svg",
-		"tarea_puesto2": "Mi objetivo es poner en práctica los conocimientos de programación que he adquirido, tanto de manera formal como autodidacta.",
-		"subtitulo2": "Herramientas/Lenguajes:",
-		"herramientas2":"SCRUM, Github, CSS, Bootstrap, JavaScript, Angular, MySQL, JAVA Y SpringBoot"
+	{
+		"titulo": "Codo a Codo 4.0",
+		"logo": "../assets/img/codoacodo.png",
+		"subtitulo": "Full Stack Java",
+		"descripcion": "Orientado a objetos concurrentes y tipeados estático."
 	}
+		],
+
+	"Experiencias": [
+	{
+		"titulo": "Puesto Actual",
+		"puesto": " Coordinadora de Asistencia",
+		"logo_puesto": "../assets/img/AC.jpg",
+		"tarea_puesto": "Actualmente me desempeño como Coordinadora de Asistencias para la empresa de asistencia al viajero ASSIST CARD, desarrollando tareas de Back Office en el departamento de Casos Complejos.",
+		"herramientas": ""
+	},
+	{
+		"titulo": "Busco cambiar mi perfil a:",
+		"puesto": "Software Developer",
+		"logo_puesto":"../assets/img/type.svg",
+		"tarea_puesto": "Mi objetivo es poner en práctica los conocimientos de programación que he adquirido, tanto de manera formal como autodidacta.",
+		"herramientas": "Herramientas/Lenguajes: SCRUM, Github, CSS, Bootstrap, JavaScript, Angular, MySQL, JAVA Y SpringBoot"
+	}
+	]
 }

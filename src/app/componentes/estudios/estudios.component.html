@@ -2,19 +2,9 @@
     <h3><b>Estudios</b></h3>
   </section>
   <section class="row text-center" id="estudios">
-    <div class="col-md-4">
-      <h4 class="agrandar"><img [src]="misEstudios.Estudio1.logo1" alt="Logo UBA" class="img-fluid" id="logo__UBA"><b>{{misEstudios.Estudio1.titulo1}}</b></h4>
-      <h5><b>{{misEstudios.Estudio1.subtitulo1}}</b></h5>
-      <p>{{misEstudios.Estudio1.descripcion1}}</p>
-    </div>
-    <div class="col-md-4">
-      <h4 class="agrandar"><img [src]="misEstudios.Estudio2.logo2" alt="Logo Argentina Programa" class="img-fluid" id="logo__argprog"><b>{{misEstudios.Estudio2.titulo2}}</b></h4>
-      <h5><b>{{misEstudios.Estudio2.subtitulo2}}</b></h5> 
-      <p>{{misEstudios.Estudio2.descripcion2}}</p>
-    </div>
-    <div class="col-md-4">
-      <h4 class="agrandar"><img [src]="misEstudios.Estudio3.logo3" alt="Logo Codo a Codo 4.0" class="img-fluid" id="logo__cac"><b>{{misEstudios.Estudio3.titulo3}}</b></h4>
-      <h5><b>{{misEstudios.Estudio3.subtitulo3}}</b></h5> 
-      <p>{{misEstudios.Estudio3.descripcion3}}</p>
+    <div class="col-md-4" *ngFor="let estudio of listaEstudios" >
+      <h4 class="agrandar"><img [src]="estudio.logo" alt="Logo UBA" class="img-fluid" id="logo__UBA"><b>{{estudio.titulo}}</b></h4>
+      <h5><b>{{estudio.subtitulo}}</b></h5>
+      <p>{{estudio.descripcion}}</p>
     </div>
   </section>

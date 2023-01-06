@@ -2,16 +2,10 @@
     <h3><b>Experiencia Laboral</b></h3>
   </section>
   <section class="row text-center" id="explab">
-    <div class="col-md-6">
-      <h4>{{miExperiencia.Experiencia1.titulo1}}</h4>
-      <h5 class="agrandar"><img [src]="miExperiencia.Experiencia1.logo_puesto1" alt="Logo AC" class="img-fluid" id="logo__AC"><b>{{miExperiencia.Experiencia1.puesto1}}</b></h5>
-      <p>{{miExperiencia.Experiencia1.tarea_puesto1}}</p>
-    </div>
-    <div class="col-md-6">
-      <h4>{{miExperiencia.Experiencia2.titulo2}}</h4>
-      <h4 class="agrandar"><b>{{miExperiencia.Experiencia2.puesto2}}</b><img [src]="miExperiencia.Experiencia2.logo_puesto2" alt="Logo Type" class="img-fluid" id="logo__type"></h4>
-      <p>{{miExperiencia.Experiencia2.tarea_puesto2}}</p>
-      <h5><b>{{miExperiencia.Experiencia2.subtitulo2}}</b></h5>
-        <h5>{{miExperiencia.Experiencia2.herramientas2}}</h5>
+    <div class="col-md-6" *ngFor="let experiencia of listaExperiencias">
+      <h4>{{experiencia.titulo}}</h4>
+      <h5 class="agrandar"><img [src]="experiencia.logo_puesto" alt="Logo AC" class="img-fluid" id="logo__AC"><b>{{experiencia.puesto}}</b></h5>
+      <p>{{experiencia.tarea_puesto}}</p>
+      <p>{{experiencia.herramientas}}</p>
     </div>
   </section>

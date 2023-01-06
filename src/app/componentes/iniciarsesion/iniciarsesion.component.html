@@ -1,5 +1,5 @@
 <h1 class="m-5 d-flex justify-content-center">Iniciar sesión</h1>
-<form [formGroup]="form" id="form">
+<form [formGroup]="form" id="form" (ngSubmit)="onEnviar($event)">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email</label>
       <input formControlName="email" 
