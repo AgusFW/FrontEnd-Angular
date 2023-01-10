@@ -2,9 +2,9 @@
     <h3><b>Experiencia Laboral</b></h3>
   </section>
   <section class="row text-center" id="explab">
-    <div class="col-md-6" *ngFor="let experiencia of Experiencias.listaExperiencia">
+    <div class="col-md-6" *ngFor="let experiencia of experiencias">
       <h4>{{experiencia.titulo}}</h4>
-      <h5 class="agrandar"><img [src]="experiencia.logo_puesto" alt="Logo AC" class="img-fluid" id="logo__AC"><b>{{experiencia.puesto}}</b></h5>
+      <h5 class="agrandar"><img src="../assets/img/{{experiencia.logo_puesto}}" alt="Logo AC" class="img-fluid" id="logo__AC"><b>{{experiencia.puesto}}</b></h5>
       <p>{{experiencia.tarea_puesto}}</p>
       <p>{{experiencia.herramientas}}</p>
     </div>

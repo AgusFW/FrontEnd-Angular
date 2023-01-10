@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PortfolioService {
-  url: String = 'http://localhost:8080/ver/persona/9';
-  htttp: any;
+  url: string = 'http://localhost:8080/ver/persona/9';
+
   constructor(private http:HttpClient) { };
 
   obtenerDatos():Observable<any>{
-    return this.htttp.get(this.url);
+    return this.http.get(this.url);
   }
 } 
