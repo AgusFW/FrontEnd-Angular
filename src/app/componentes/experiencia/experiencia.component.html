@@ -1,13 +1,81 @@
 <section class="row text-center" id="exp">
-    <h3><b>Experiencia Laboral</b><button type="button" class="btn btn-outline-success btn-sm" style="margin: 2%;">Nueva Experiencia</button></h3>
+    <h3><b>Experiencia Laboral</b><button type="button" class="btn btn-outline-success btn-sm" style="margin: 2%;" data-bs-toggle="modal" data-bs-target="#crearexp">Nueva Experiencia</button></h3>
   </section>
+
+<!-- Nueva Experiencia -->
+<div class="modal fade" id="crearexp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva Experiencia</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form" (ngSubmit)="newExp($event, experiencias?.id)">
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" formControlName="titulo" placeholder="Titulo" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" formControlName="logo_titulo"placeholder="Logo" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" formControlName="puesto" placeholder="Puesto" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" formControlName="tarea_puesto" placeholder="Tearea del puesto" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" formControlName="herramientas" placeholder="Herramientas" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <button type="submit" class="btn btn-outline-success" data-bs-dismiss="modal" Style="margin: 1%;">Agregar</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modificar Experiencia -->
+<div class="modal fade" id="modificarexp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modificar Experiencia</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form">
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" value="" formControlName="titulo" placeholder="Titulo" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" formControlName="logo_titulo"placeholder="Logo" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" formControlName="puesto" placeholder="Puesto" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" formControlName="tarea_puesto" placeholder="Tearea del puesto" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" formControlName="herramientas" placeholder="Herramientas" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <button type="submit" class="btn btn-outline-success" data-bs-dismiss="modal" Style="margin: 1%;" (ngSubmit)="modExp($event, experiencias)">Modificar</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- listaExperiencia -->
   <section class="row text-center" id="explab">
-    <div class="col-md-6" *ngFor="let experiencia of experiencias">
+    <div class="col-md-6" *ngFor="let experiencia of experiencias?.listaExperiencia">
       <h4>{{experiencia.titulo}}</h4>
       <h5 class="agrandar"><img src="../assets/img/{{experiencia.logo_puesto}}" alt="Logo AC" class="img-fluid" id="logo__AC"><b>{{experiencia.puesto}}</b></h5>
       <p>{{experiencia.tarea_puesto}}</p>
       <p>{{experiencia.herramientas}}</p>
-      <button type="button" class="btn btn-outline-dark btn-sm" style="margin: 2%;">Modificar</button>
-      <button type="button" class="btn btn-outline-danger btn-sm">Borrar</button>
+      <button type="button" class="btn btn-outline-dark btn-sm" (onClick)="verExp(experiencia?.id)" style="margin: 2%;" data-bs-toggle="modal" data-bs-target="#modificarexp">Modificar</button>
+      <button type="button" class="btn btn-outline-danger btn-sm" (ngSubmit)="deleteExp(experiencia?.id)">Borrar</button>
     </div>
   </section>

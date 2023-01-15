@@ -13,6 +13,7 @@ import { IniciarsesionComponent } from './componentes/iniciarsesion/iniciarsesio
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
