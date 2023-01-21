@@ -16,10 +16,10 @@ export class PortfolioService {
   }
 
   nuevaExp(experiencia:any, id:any):Observable<any>{
-    return this.http.post(this.url2 + "/new/experiencia/" + id, experiencia);
+    return this.http.post(this.url2 + "/new/experiencia/" + id, experiencia); 
   }
 
-  modificarExp(experiencia:any):Observable<any>{
+  modificarExp(experiencia: any):Observable<any>{
     return this.http.put(this.url2 + "/change/experiencia", experiencia);
   }
 
@@ -30,4 +30,12 @@ export class PortfolioService {
   borrarExp(id:any):Observable<any>{
     return this.http.delete(this.url2 + "/delete/experiencia/" + id);
   }
+
+  nuevoEst(estudios:any, id:any):Observable<any>{
+    return this.http.post(this.url2 + "/new/estudio/" + id, estudios);
+  }
+
+  /*isLogged(email:any, password:any):Observable<any>{
+    return this.http.post(this.url2 + "/login/" + email + "/" + password);
+  }*/
 } 

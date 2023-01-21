@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -8,7 +9,18 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class EstudiosComponent implements OnInit {
   estudios: any;
-  constructor(private datosPortfolio: PortfolioService) { }
+  form: FormGroup;
+
+  constructor(private datosPortfolio: PortfolioService, private formbuilder: FormBuilder) { 
+    this.form = this.formbuilder.group({
+
+      id:["",Validators.required],
+      titulo:["", Validators.required],
+      subtitulo:["", Validators.required],
+      descripcion:["", Validators.required],
+      logo: ["", Validators.required]
+   })
+  }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data =>{
@@ -16,4 +28,11 @@ export class EstudiosComponent implements OnInit {
       this.estudios=data.listaEstudios;
     });
   }
+
+  newEst(event: Event, id: any){
+    event.preventDefault;
+    this.datosPortfolio.nuevoEst(this.form.value, id).subscribe(data =>{
+    });
+  }
+
 }

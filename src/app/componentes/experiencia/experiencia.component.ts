@@ -29,7 +29,7 @@ export class ExperienciaComponent implements OnInit {
     this.datosPortfolio.obtenerDatos().subscribe(data =>{
       console.log(data);
       this.experiencias=data;
-    });
+    })
   }
 
   newExp(event: Event, id: any){
@@ -38,18 +38,8 @@ export class ExperienciaComponent implements OnInit {
     });
   }
 
-  modExp(event: Event, id: any){
-    event.preventDefault;
-    this.datosPortfolio.modificarExp(this.form.value).subscribe(data =>{
-      console.log(data);
-      this.experiencias=data;
-    }); 
-  }
-
-  verExp(expeEdit: any): void{
-    this.datosPortfolio.buscarExp(expeEdit).subscribe(data =>{
-      this.expeEdit=data;
-      console.log(data);
+  verExp(event: Event, expeEdit: any): void{
+    this.datosPortfolio.buscarExp(expeEdit).subscribe(data =>{    
       this.form.patchValue({
         id: data.id,
         titulo: data.titulo,
@@ -58,6 +48,16 @@ export class ExperienciaComponent implements OnInit {
         tarea_puesto: data.tarea_puesto,
         herramientas: data.herramientas
       })
+      this.expeEdit=data; 
+      console.log(data); 
+    }); 
+  }
+
+  modExp(event: Event){
+    event.preventDefault;
+    this.datosPortfolio.modificarExp(this.form.value).subscribe(data =>{
+      console.log(data);
+      this.expeEdit=data;
     }); 
   }
 

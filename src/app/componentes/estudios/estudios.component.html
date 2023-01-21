@@ -1,6 +1,37 @@
 <section class="row text-center" id="est">
-    <h3><b>Estudios</b><button type="button" class="btn btn-outline-success btn-sm" style="margin: 2%;">Nuevo Estudio</button></h3>
+    <h3><b>Estudios</b><button type="button" class="btn btn-outline-success btn-sm" style="margin: 2%;" data-bs-toggle="modal" data-bs-target="#crearest">Nuevo Estudio</button></h3>
   </section>
+<!-- Nuevo Estudio -->
+<div class="modal fade" id="crearest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Estudio</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form" (ngSubmit)="newEst($event, estudios?.id)">
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" formControlName="titulo" placeholder="Titulo" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" formControlName="logo"placeholder="Logo" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" formControlName="subtitulo" placeholder="Subtitulo" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" formControlName="descripcion" placeholder="Descripcion" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <button type="submit" class="btn btn-outline-success" data-bs-dismiss="modal" Style="margin: 1%;">Agregar</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- listaEstudios -->
   <section class="row text-center" id="estudios">
     <div class="col-md-4" *ngFor="let estudio of estudios" >
       <h4 class="agrandar"><img src="../assets/img/{{estudio.logo}}" alt="Logo UBA" class="img-fluid" id="logo__UBA"><b>{{estudio.titulo}}</b></h4>
