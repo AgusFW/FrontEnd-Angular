@@ -11,6 +11,9 @@
       </div>
       <div class="modal-body">
         <form [formGroup]="form" (ngSubmit)="newEst($event, estudios?.id)">
+          <div>
+            <input type=hidden formcontrolname="id">
+          </div>
         <div class="input-group flex-nowrap" Style="margin: 1%;">
           <input type="text" class="form-control" formControlName="titulo" placeholder="Titulo" aria-label="Username" aria-describedby="addon-wrapping">
         </div>
@@ -31,13 +34,46 @@
   </div>
 </div>
 
+<!-- Modificar Experiencia -->
+<div class="modal fade" id="modificarest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modificar Experiencia</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form" (ngSubmit)="modEst()">
+         <div>
+          <input type=hidden formcontrolname="id">
+         </div>          
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" value="estuEdit?.titulo" formControlName="titulo" placeholder="Titulo" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" value="estuEdit?.subtitulo" formControlName="subtitulo" placeholder="Subtitulo" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" value="estuEdit?.descripcion" formControlName="descripcion" placeholder="Descripcion" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <input type="text" class="form-control" value="estuEdit?.logo" formControlName="logo" placeholder="Logo" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <button type="submit" class="btn btn-outline-success" data-bs-dismiss="modal" Style="margin: 1%;">Grabar</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- listaEstudios -->
   <section class="row text-center" id="estudios">
-    <div class="col-md-4" *ngFor="let estudio of estudios" >
+    <div class="col-md-4" *ngFor="let estudio of estudios?.listaEstudios" >
       <h4 class="agrandar"><img src="../assets/img/{{estudio.logo}}" alt="Logo UBA" class="img-fluid" id="logo__UBA"><b>{{estudio.titulo}}</b></h4>
       <h5><b>{{estudio.subtitulo}}</b></h5>
       <p>{{estudio.descripcion}}</p>
-      <button type="button" class="btn btn-outline-dark btn-sm" style="margin: 2%;">Modificar</button>
-      <button type="button" class="btn btn-outline-danger btn-sm">Borrar</button>
+      <button type="button" class="btn btn-outline-dark btn-sm" style="margin: 2%;" data-bs-toggle="modal" data-bs-target="#modificarest" (click)="verEst(estudio)">Modificar</button>
+      <button type="button" class="btn btn-outline-danger btn-sm" (click)="deleteEst(estudio?.id)">Borrar</button>
     </div>
   </section>

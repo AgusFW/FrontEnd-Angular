@@ -13,7 +13,7 @@
       <div class="modal-body">
         <form [formGroup]="form" (ngSubmit)="newExp($event, experiencias?.id)">
           <div>
-            <input type=hidden formcontrolname="id" value="">
+            <input type=hidden formcontrolname="id">
           </div>
         <div class="input-group flex-nowrap" Style="margin: 1%;">
           <input type="text" class="form-control" formControlName="titulo" placeholder="Titulo" aria-label="Username" aria-describedby="addon-wrapping">
