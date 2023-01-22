@@ -10,6 +10,8 @@ import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 })
 export class IniciarsesionComponent implements OnInit {
   form: FormGroup;
+  credenciales: any;
+
   constructor(private formBuilder:FormBuilder, private autenticacionService:AutenticacionService, private ruta:Router) { 
   this.form = this.formBuilder.group(
     {
@@ -19,6 +21,10 @@ export class IniciarsesionComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.autenticacionService.obtenerDatos().subscribe(data =>{
+      console.log(data);
+      this.credenciales=data;
+    })
   }
 
   get Email () {
@@ -29,11 +35,10 @@ export class IniciarsesionComponent implements OnInit {
     return this.form.get('password');
   }
 
-  onEnviar(){
-      this.autenticacionService.IniciarSesion(this.form.value).subscribe(data =>{
-      this.ruta.navigate(['/portfolio'])
-    })
-
+  onEnviar(email:any, password:any){
+    this.autenticacionService.IniciarSesion(this.form.value, email, password).subscribe(data =>{
+    });
+    this.ruta.navigate(['/portfolio'])
   }
 
 }

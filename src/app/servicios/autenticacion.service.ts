@@ -1,23 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, observable} from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class AutenticacionService {
-  url="";
-  currentUserSubject: BehaviorSubject<any>;
+  url: string = 'http://localhost:8080';
 
   constructor(private http:HttpClient) { 
-    console.log("El servicio de autenticación esta corriendo");
-    this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'))
+   }
+
+  obtenerDatos():Observable<any>{
+    return this.http.get(this.url + "/ver/persona/9");
   }
 
-  IniciarSesion(email: any, password: any):Observable<any>{
-    return this.http.post(this.url + "/" + email + "/" + password, credenciales).pipe(map(data=>{
-      return data;
-    }))
+  IniciarSesion(credenciales: any, email:any, password: any):Observable<any>{
+    return this.http.post(this.url + "/" + email + "/" + password, credenciales);
   }
 }
