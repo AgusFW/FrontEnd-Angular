@@ -1,5 +1,5 @@
 <h1 class="m-5 d-flex justify-content-center">Iniciar sesión</h1>
-<form [formGroup]="form" id="form" (ngSubmit)="onEnviar($event)">
+<form [formGroup]="form" id="form" (ngSubmit)="onEnviar()">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email</label>
       <input formControlName="email" 
@@ -28,7 +28,7 @@
         </p>
       </div>
     </div>
-    <button type="submit" class="btn btn-dark" (onclic)="onEnviar($event)">Enviar</button>
+    <button type="submit" class="btn btn-dark" (onclic)="onEnviar()">Enviar</button>
   </form>
   <div>
     <p><img src="../assets/img/AGUSTINA-LOGO.gif" alt="Logo cto" class="img-fluid" id="logo-inicio"></p>

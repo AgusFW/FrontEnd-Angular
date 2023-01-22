@@ -15,10 +15,8 @@ export class AutenticacionService {
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'))
   }
 
-  IniciarSesion(credenciales:any):Observable<any>{
-    return this.http.post(this.url, credenciales).pipe(map(data=>{
-      sessionStorage.setItem('currentYser', JSON.stringify(data));
-      this.currentUserSubject.next(data);
+  IniciarSesion(email: any, password: any):Observable<any>{
+    return this.http.post(this.url + "/" + email + "/" + password, credenciales).pipe(map(data=>{
       return data;
     }))
   }

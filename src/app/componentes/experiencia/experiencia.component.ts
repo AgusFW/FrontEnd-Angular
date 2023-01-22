@@ -38,8 +38,8 @@ export class ExperienciaComponent implements OnInit {
     });
   }
 
-  verExp(event: Event, expeEdit: any): void{
-    this.datosPortfolio.buscarExp(expeEdit).subscribe(data =>{    
+  verExp(expeEdit: any): void{
+    this.datosPortfolio.buscarExp(expeEdit.id).subscribe(data =>{    
       this.form.patchValue({
         id: data.id,
         titulo: data.titulo,
@@ -53,8 +53,7 @@ export class ExperienciaComponent implements OnInit {
     }); 
   }
 
-  modExp(event: Event){
-    event.preventDefault;
+  modExp(){
     this.datosPortfolio.modificarExp(this.form.value).subscribe(data =>{
       console.log(data);
       this.expeEdit=data;

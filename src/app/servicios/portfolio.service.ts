@@ -34,8 +34,4 @@ export class PortfolioService {
   nuevoEst(estudios:any, id:any):Observable<any>{
     return this.http.post(this.url2 + "/new/estudio/" + id, estudios);
   }
-
-  /*isLogged(email:any, password:any):Observable<any>{
-    return this.http.post(this.url2 + "/login/" + email + "/" + password);
-  }*/
 } 
