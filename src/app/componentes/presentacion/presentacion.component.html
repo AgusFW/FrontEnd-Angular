@@ -3,7 +3,7 @@
       <h1 id="titulo"><b>{{miPortfolio.nombre}}</b></h1>
       <h4 id="subtitulo"><b>{{miPortfolio.sobre_mi}}</b></h4>
       <p>{{miPortfolio.motivo}}</p>
-      <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modificarpresentacion" (click)="verPres(miPortfolio)">Modificar</button>
+      <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modificarpresentacion" (click)="verPres(miPortfolio)"><i class="fa-solid fa-pen"></i></button>
     </div>
     <figure class="col-md-5">
       <img src="../assets/img/{{miPortfolio.img_persona}}" class="img-thumbnail col" id="foto" alt="foto fondo">
