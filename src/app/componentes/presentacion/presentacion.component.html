@@ -22,15 +22,15 @@
           <div>
             <input type=hidden formcontrolname="id">
            </div>
-           <div>
-            <input type=hidden formcontrolname="nombre">
-           </div>
-           <div>
-            <input type=hidden formcontrolname="sobre_mi">
-           </div>
-           <div>
-            <input type=hidden formcontrolname="img_persona">
-           </div>          
+           <div class="input-group flex-nowrap" Style="margin: 1%;">
+            <input type="text" class="form-control" value="presEdit?.nombre" formControlName="nombre" placeholder="Nombre" aria-label="Username" aria-describedby="addon-wrapping">
+          </div>
+          <div class="input-group flex-nowrap" Style="margin: 1%;">
+            <input type="text" class="form-control" value="presEdit?.sobre_mi" formControlName="sobre_mi" placeholder="Sobre Mi" aria-label="Username" aria-describedby="addon-wrapping">
+          </div>
+          <div class="input-group flex-nowrap" Style="margin: 1%;">
+            <input type="text" class="form-control" value="presEdit?.img_persona" formControlName="img_persona" placeholder="Imagen" aria-label="Username" aria-describedby="addon-wrapping">
+          </div>          
         <div class="input-group flex-nowrap" Style="margin: 1%;">
           <textarea type="text" class="form-control" value="presEdit?.motivo" formControlName="motivo" placeholder="Motivo" aria-label="Username" aria-describedby="addon-wrapping"></textarea>
         </div>
