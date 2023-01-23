@@ -3,9 +3,41 @@
       <h1 id="titulo"><b>{{miPortfolio.nombre}}</b></h1>
       <h4 id="subtitulo"><b>{{miPortfolio.sobre_mi}}</b></h4>
       <p>{{miPortfolio.motivo}}</p>
-      <button type="button" class="btn btn-outline-dark btn-sm">Modificar</button>
+      <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modificarpresentacion" (click)="verPres(miPortfolio)">Modificar</button>
     </div>
     <figure class="col-md-5">
       <img src="../assets/img/{{miPortfolio.img_persona}}" class="img-thumbnail col" id="foto" alt="foto fondo">
     </figure>
   </section>
+  <!-- Modificar Presentación -->
+<div class="modal fade" id="modificarpresentacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modificar Presentación</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form" (ngSubmit)="modPres()">
+          <div>
+            <input type=hidden formcontrolname="id">
+           </div>
+           <div>
+            <input type=hidden formcontrolname="nombre">
+           </div>
+           <div>
+            <input type=hidden formcontrolname="sobre_mi">
+           </div>
+           <div>
+            <input type=hidden formcontrolname="img_persona">
+           </div>          
+        <div class="input-group flex-nowrap" Style="margin: 1%;">
+          <textarea type="text" class="form-control" value="presEdit?.motivo" formControlName="motivo" placeholder="Motivo" aria-label="Username" aria-describedby="addon-wrapping"></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline-success" data-bs-dismiss="modal" Style="margin: 1%;">Grabar</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
