@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { observable, Subscriber } from 'rxjs';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -62,6 +61,6 @@ export class ExperienciaComponent implements OnInit {
 
   deleteExp(id: any){
     this.datosPortfolio.borrarExp(id).subscribe(data =>{
-    })
+    });
   }
 }

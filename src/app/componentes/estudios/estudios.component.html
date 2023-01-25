@@ -1,5 +1,5 @@
 <section class="row text-center" id="est">
-    <h3><b>Estudios</b><button type="button" class="btn btn-outline-success" style="margin: 2%;" data-bs-toggle="modal" data-bs-target="#crearest"><i class="fa-solid fa-plus"></i></button></h3>
+    <h3><b>Estudios</b><button *ngIf="" type="button" class="btn btn-outline-success" style="margin: 2%;" data-bs-toggle="modal" data-bs-target="#crearest"><i class="fa-solid fa-plus"></i></button></h3>
   </section>
 <!-- Nuevo Estudio -->
 <div class="modal fade" id="crearest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -73,7 +73,7 @@
       <h4 class="agrandar"><img src="../assets/img/{{estudio.logo}}" alt="Logo UBA" class="img-fluid" id="logo__UBA"><b>{{estudio.titulo}}</b></h4>
       <h5><b>{{estudio.subtitulo}}</b></h5>
       <p>{{estudio.descripcion}}</p>
-      <button type="button" class="btn btn-outline-dark" style="margin: 2%;" data-bs-toggle="modal" data-bs-target="#modificarest" (click)="verEst(estudio)"><i class="fa-solid fa-pen"></i></button>
-      <button type="button" class="btn btn-outline-danger" (click)="deleteEst(estudio?.id)"><i class="fa-solid fa-xmark"></i></button>
+      <button *ngIf="" type="button" class="btn btn-outline-dark" style="margin: 2%;" data-bs-toggle="modal" data-bs-target="#modificarest" (click)="verEst(estudio)"><i class="fa-solid fa-pen"></i></button>
+      <button *ngIf="" type="button" class="btn btn-outline-danger" (click)="deleteEst(estudio?.id)"><i class="fa-solid fa-xmark"></i></button>
     </div>
   </section>
