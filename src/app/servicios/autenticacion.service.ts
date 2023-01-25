@@ -16,7 +16,7 @@ export class AutenticacionService {
     return this.http.get(this.url + "/ver/persona/9");
   }
 
-  IniciarSesion(password: any, email: any, credenciales: any):Observable<any>{
-    return this.http.post(this.url + "/login/" + password + "/" + email, credenciales);
+  IniciarSesion(password: any, email: any, login: any):Observable<any>{
+    return this.http.post(this.url + "/login/" + password + "/" + email, login);
   }
 }

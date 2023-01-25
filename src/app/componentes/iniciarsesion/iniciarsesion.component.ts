@@ -13,7 +13,6 @@ export class IniciarsesionComponent implements OnInit {
   login: any;
 
   constructor(private formBuilder:FormBuilder, private autenticacionService:AutenticacionService, private ruta:Router) { 
-    this.login = false;
     this.form = this.formBuilder.group(
     {
       email: ['', [Validators.required, Validators.email]],
@@ -33,14 +32,13 @@ export class IniciarsesionComponent implements OnInit {
 
   onEnviar(event: Event){
     event.preventDefault;
-    this.autenticacionService.IniciarSesion(this.form.value.email, this.form.value.password, this.form.value).subscribe(data =>{
-    this.login= data;
-    console.log(this.login);
+    this.autenticacionService.IniciarSesion(this.Email, this.Password, this.form.value).subscribe(data =>{
+    console.log(data);
     });
-    if (this.login == false){
-      this.ruta.navigate(['/iniciarsesion']);
-    } if (this.login == true){
-        this.ruta.navigate(['/portfolio']);
+    if (true){
+      this.ruta.navigate(['/portfolio']);
+    } if (false) {
+      this.ruta.navigate(['/iniciarsesion']);      
     }
   }
 
