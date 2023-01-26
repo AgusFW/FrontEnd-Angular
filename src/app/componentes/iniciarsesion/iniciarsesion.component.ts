@@ -32,14 +32,10 @@ export class IniciarsesionComponent implements OnInit {
 
   onEnviar(event: Event){
     event.preventDefault;
-    this.autenticacionService.IniciarSesion(this.Email, this.Password, this.form.value).subscribe(data =>{
+    this.autenticacionService.IniciarSesion(this.form.value.password, this.form.value.email).subscribe(data =>{
+    this.login = data;
     console.log(data);
     });
-    if (true){
-      this.ruta.navigate(['/portfolio']);
-    } if (false) {
-      this.ruta.navigate(['/iniciarsesion']);      
-    }
   }
 
 }

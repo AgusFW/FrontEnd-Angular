@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class EstudiosComponent implements OnInit {
   form: FormGroup;
   estuEdit: any;
 
-  constructor(private datosPortfolio: PortfolioService, private formbuilder: FormBuilder) { 
+  constructor(private datosPortfolio: PortfolioService, private formbuilder: FormBuilder, private autenService: AutenticacionService) { 
     this.form = this.formbuilder.group({
 
       id:["",Validators.required],
@@ -60,6 +61,10 @@ verEst(estuEdit: any): void{
 deleteEst(id: any){
   this.datosPortfolio.borrarEst(id).subscribe(data =>{
   })
+}
+
+iniciado(){
+ return this.autenService.logged;
 }
 
 }

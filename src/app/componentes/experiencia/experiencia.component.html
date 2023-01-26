@@ -1,5 +1,5 @@
 <section class="row text-center" id="exp">
-    <h3><b>Experiencia Laboral</b><button type="button" class="btn btn-outline-success" style="margin: 2%;" data-bs-toggle="modal" data-bs-target="#crearexp"><i class="fa-solid fa-plus"></i></button></h3>
+    <h3><b>Experiencia Laboral</b><button *ngIf="" type="button" class="btn btn-outline-success" style="margin: 2%;" data-bs-toggle="modal" data-bs-target="#crearexp"><i class="fa-solid fa-plus"></i></button></h3>
   </section>
 
 <!-- Nueva Experiencia -->
@@ -81,7 +81,7 @@
       <h5 class="agrandar"><img src="../assets/img/{{experiencia.logo_puesto}}" alt="Logo AC" class="img-fluid" id="logo__AC"><b>{{experiencia.puesto}}</b></h5>
       <p>{{experiencia.tarea_puesto}}</p>
       <p>{{experiencia.herramientas}}</p>
-      <button type="button" class="btn btn-outline-dark" style="margin: 2%;" data-bs-toggle="modal" data-bs-target="#modificarexp" (click)="verExp(experiencia)"><i class="fa-solid fa-pen"></i></button>
-      <button type="button" class="btn btn-outline-danger" (click)="deleteExp(experiencia?.id)"><i class="fa-solid fa-xmark"></i></button>
+      <button *ngIf="" type="button" class="btn btn-outline-dark" style="margin: 2%;" data-bs-toggle="modal" data-bs-target="#modificarexp" (click)="verExp(experiencia)"><i class="fa-solid fa-pen"></i></button>
+      <button *ngIf="" type="button" class="btn btn-outline-danger" (click)="deleteExp(experiencia?.id)"><i class="fa-solid fa-xmark"></i></button>
     </div>
   </section>
