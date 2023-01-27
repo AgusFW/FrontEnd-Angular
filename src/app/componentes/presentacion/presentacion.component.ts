@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 
 @Component({
   selector: 'app-presentacion',
@@ -13,7 +14,7 @@ export class PresentacionComponent implements OnInit {
   presEdit: any;
 
 
-  constructor(private datosPortfolio:PortfolioService,  private formbuilder: FormBuilder) { 
+  constructor(private datosPortfolio:PortfolioService,  private formbuilder: FormBuilder, private autenService: AutenticacionService) { 
     this.form = this.formbuilder.group({
 
       id:["",Validators.required],
@@ -51,5 +52,9 @@ export class PresentacionComponent implements OnInit {
     this.presEdit=data;
   }); 
 }
+
+iniciado(){
+  return this.autenService.logged();
+ } 
   
 }

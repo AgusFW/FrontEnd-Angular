@@ -64,7 +64,7 @@ deleteEst(id: any){
 }
 
 iniciado(){
- return this.autenService.logged;
-}
+ return this.autenService.logged();
+} 
 
 }
