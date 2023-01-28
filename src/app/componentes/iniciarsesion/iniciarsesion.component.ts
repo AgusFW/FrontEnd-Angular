@@ -39,3 +39,8 @@ export class IniciarsesionComponent implements OnInit {
   }
 
 }
+
+export class Credenciales{
+  email: any;
+  password: any;
+}

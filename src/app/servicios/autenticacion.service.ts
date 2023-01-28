@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map} from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { Credenciales } from '../componentes/iniciarsesion/iniciarsesion.component';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +22,10 @@ export class AutenticacionService {
   }
 
   IniciarSesion(password: any, email: any):Observable<any>{
-    return this.http.get(this.url + "/login/" + password + "/" + email).pipe(map(data => {
+    let credenciales = new Credenciales();
+    credenciales.password = password;
+    credenciales.email = email;
+    return this.http.post(this.url + "/login", credenciales).pipe(map(data => {
       this.login = data;
       if (this.login == true){
         console.log("entro al true");
