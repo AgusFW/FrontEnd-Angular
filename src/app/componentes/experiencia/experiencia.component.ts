@@ -15,7 +15,6 @@ export class ExperienciaComponent implements OnInit {
 
   constructor(private datosPortfolio: PortfolioService, private formbuilder: FormBuilder, private autenService: AutenticacionService) { 
     this.form = this.formbuilder.group({
-
       id:["",Validators.required],
       titulo:["", Validators.required],
       logo_puesto:["", Validators.required],
