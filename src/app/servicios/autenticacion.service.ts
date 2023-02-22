@@ -10,7 +10,7 @@ import { Credenciales } from '../componentes/iniciarsesion/iniciarsesion.compone
 })
 
 export class AutenticacionService {
-  url: string = 'http://localhost:8080';
+  url: string = 'https://portfolio-huet.onrender.com';
   login: any;
 
   constructor(private http:HttpClient, private ruta:Router) { 
